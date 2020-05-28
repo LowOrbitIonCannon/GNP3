@@ -2,13 +2,35 @@
 
 
 
+\subsection{Aufbau}
+
+% grafik einbinden
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{img/Blockschalt.PNG}
+        \caption{Blockschaltbild, Quelle: "GNP3 Aktive RC-Filter.pdf" }
+        \label{fig:A3_label}
+    \end{center}
+\end{figure}
 
 
 
 
 
 
-\subsection{Amplitudengänge (mit Phasengängen) von Butterworth-, Tschebyscheff- und Bessel-Tiefpass gemeinsam in einem Plot über logarithmischer Frequenzachse, Frequenzbereich 100Hz...20kHz („AktFilt Ampl & Phase.set“).}
+\subsection{Amplitudengänge (mit Phasengängen) von Butterworth-, Tschebyscheff- und Bessel-Tiefpass gemeinsam in einem Plot über logarithmischer Frequenzachse, Frequenzbereich 100Hz...20kHz („AktFilt Ampl Phase.set“).}
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}\hline
+    \tbf{Filter} & \tbf{Grenzfrequenz $f_g$} & \tbf{Phase $\SI{-60}{\degree}$}     &  \tbf{Phase $\SI{-120}{\degree}$}     &  \\ \hline
+    Butterworth                   & \SI{1570.4}{\hertz} &     \SI{1069.2}{} &\SI{2417.2}{}     \\
+    Tschebyscheff             & \SI{1582.6}{\hertz}  &   \SI{915.3}{}  &\SI{1425.2}{}    \\ 
+    Bessel                &\SI{1582.6}{\hertz}   &\SI{1248.9}{}&\SI{3298.2}{}  \\ \hline
+    \end{tabular}
+    \caption{Filter Parameter}
+\end{table}
 
 
 
@@ -16,12 +38,23 @@
 \subsection{Phasengänge von Butterworth-, Tschebyscheff- und Bessel-Tiefpass gemeinsam in einem Plot über linearer Frequenzachse, Frequenzbereich 100Hz...4kHz. }
 
 
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}\hline
+    \tbf{Filter} & \tbf{Grenzfrequenz $f_g$} & \tbf{Phase $\SI{-60}{\degree}$}     &  \tbf{Phase $\SI{-120}{\degree}$}     &  \\ \hline
+    Butterworth                   & \SI{1584.6}{\hertz} &     \SI{1251.3}{} &\SI{3283.9}{}     \\
+    Tschebyscheff             & \SI{1578.9}{\hertz}  &   \SI{914.6}{}  &\SI{1419.8}{}    \\ 
+    Bessel                &\SI{1584.6}{\hertz}   &\SI{1066.4}{}&\SI{2404.5}{}  \\ \hline
+    \end{tabular}
+    \caption{Grenzfrequenzen der Filter}
+\end{table}
+
 % grafik einbinden
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=0.8\textwidth, angle =-90]{img/3.2 Amplitudengang linear.png}
         \caption{Amplitudengang linear}
-        \label{fig:A1_label}
+        \label{fig:A3_amp}
     \end{center}
 \end{figure}
 +
@@ -31,21 +64,35 @@
     \begin{center}
         \includegraphics[width=0.8\textwidth, angle =-90]{img/3.2 Phasengänge linear.png}
         \caption{Phasengänge linear}
-        \label{fig:A1_label}
+        \label{fig:A3_phase}
     \end{center}
 \end{figure}
 
 
 
 
+
+
 \subsection{Amplitudengänge (mit Phasengängen) von Butterworth-, Tschebyscheff- und BesselHochpass gemeinsam in einem Plot über logarithmischer Frequenzachse, Frequenzbereich 100Hz...20kHz. }
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}\hline
+    \tbf{Filter}     & \tbf{Grenzfrequenz $f_g$}  \\ \hline
+    Butterworth                   & \SI{1632.5}{\hertz}            \\
+    Tschebyscheff             & \SI{1607.3}{\hertz}           \\ 
+    Bessel                &\SI{1619.8}{\hertz}     \\ \hline
+    \end{tabular}
+    \caption{Grenzfrequenzen der Filter}
+\end{table}
 
 % grafik einbinden
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=0.8\textwidth, angle =-90]{img/3.3 Amplitudengänge HP log.png}
         \caption{\imgfilename}
-        \label{fig:A1_label}
+        \label{fig:A3b_label}
     \end{center}
 \end{figure}
 % grafik einbinden
@@ -53,7 +100,7 @@
     \begin{center}
         \includegraphics[width=0.8\textwidth, angle =-90]{img/3.3 Phasengänge HP log.png}
         \caption{\imgfilename}
-        \label{fig:A1_label}
+        \label{fig:A3c_label}
     \end{center}
 \end{figure}
 
@@ -65,7 +112,7 @@
  
 
 %multi figure
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \subfloat[Amplitudengang Bandpass]{\includegraphics[width = \textwidth/3, angle =-90]{img/3.4 Amplitudengang Bandpass.png}}  
 \subfloat[Amplitudengang Bandsperre]{\includegraphics[width = \textwidth/3, angle =-90]{img/3.4 Amplitudengang Bandsperre.png}}\\
@@ -77,12 +124,22 @@
 \end{figure}
 
 
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}\hline
+    \tbf{Filter}     & \tbf{Mitte} & \tbf{$\SI{-3}{\decibel}$ unten} & \tbf{$\SI{-3}{\decibel}$ oben} \\ \hline
+    Bandpass                   & \SI{1932.3}{\hertz}  & \SI{1759.1}{\hertz} & \SI{2085.9}{\hertz}\\
+    Bandsperre                 & \SI{1914.2}{\hertz}  & \SI{1912}{\hertz} & \SI{1916.3}{\hertz}\\ \hline
+    \end{tabular}
+    \caption{Beispiel Addieren:}
+\end{table}
 
 
 
 
 
 
+%Amplitudengänge von Butterworth-, Tschebyscheff- und Bessel-Tiefpass und Markierung der Grenzfrequenzen Phasengänge von Butterworth-, Tschebyscheff- und Bessel-Tiefpass und Markierung der Frequenzen für eine Phasenverschiebung von -60° und -120° Amplitudengänge von Butterworth-, Tschebyscheff- und Bessel-Hochpass und Markierung der Grenzfrequenzen Amplitudengänge von Bandpass und Bandsperre und Markierung der Grenzfrequenzen Auswertung: Alle Messwerte der Grenzfrequenzen sind in einer Tabelle mit den Vorgabewerten einzutragen und zu vergleichen; Aus den Frequenzen bei 60° und 120° Phasenverschiebung sind die Koeffizienten a1, b1 der 3 Tiefpässe zu berechnen und mit den Vorgabewerten zu vergleichen 
 
 
 
