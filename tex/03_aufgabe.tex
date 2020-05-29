@@ -1,13 +1,16 @@
 \section{ Messung von Amplituden- und Phasengang der Filterschaltungen }
+In diesem Teil sollen die Amplituden und Phasengänge der Filter gemessen und aufgezeichnet werden.
+Der hierfür verwendete Universalfilter wurde in der Vorbereitung analysiert.
 
 
-
-\subsection{Aufbau}
+\subsection*{Aufbau}
+Der Universalfilter wird wie im Blockschaltbild an den Audioanalyzer angeschlossen.
+Am Audioanalyzer wird das Program "AktFilt Ampl & Phase.set" gestartet und ausgeführt.
 
 % grafik einbinden
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=0.8\textwidth]{img/Blockschalt.PNG}
+        \includegraphics[width=0.5\textwidth]{img/Blockschalt.PNG}
         \caption{Blockschaltbild, Quelle: "GNP3 Aktive RC-Filter.pdf" }
         \label{fig:A3_label}
     \end{center}
@@ -18,13 +21,32 @@
 
 
 
-\subsection{Amplitudengänge (mit Phasengängen) von Butterworth-, Tschebyscheff- und Bessel-Tiefpass gemeinsam in einem Plot über logarithmischer Frequenzachse, Frequenzbereich 100Hz...20kHz („AktFilt Ampl Phase.set“).}
+\subsection{Amplituden und Phasengängen von Butterworth-, Tschebyscheff- und Bessel-Tiefpass, logarithmischer}
+Die Messung wird mit einem Frequenz "Sweep" von $\SI{100}{\hertz}-\SI{20}{\kilo\hertz}$ durchgeführt.
+% grafik einbinden
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.8\textwidth, angle =-90]{img/3.1 Amplitudengang.png}
+        \caption{Amplitudengang, Rot = Tschebyscheff, Pink = Butterworth , Gelb = Bessel}
+        \label{fig:A3_amp}
+    \end{center}
+\end{figure}
+Der Tschebyscheff filter  (Rote Linie) ist leicht an seinem deutlichem über schwingen kurz vor der Grenzfrequenz und schärfsten Abfall der Amplitude zu erkennen. Der Butterworth filter (Pinke Linie) ist der Filter der eine möglichst flache Kurve im Durchlassbereich aufweist. Bleibt noch der Bessel filter (Gelbe Linie) mit seinem geringem über schwingen.
 
+% grafik einbinden
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.8\textwidth, angle =-90]{img/3.1 Phasengänge.png} 
+        \caption{Phasengänge, Rot = Tschebyscheff, Pink = Butterworth , Gelb = Bessel}
+        \label{fig:A3_phase}
+    \end{center}
+\end{figure}
 
+Aus den Messungen lassen sich die Grenzfrequenzen und Phasen der drei Filter ablesen:
 \begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|c|c|}\hline
-    \tbf{Filter} & \tbf{Grenzfrequenz $f_g$} & \tbf{Phase $\SI{-60}{\degree}$}     &  \tbf{Phase $\SI{-120}{\degree}$}     &  \\ \hline
+    \tbf{Filter} & \tbf{Grenzfrequenz $f_g$} & \tbf{Phase $\SI{-60}{\degree}$}     &  \tbf{Phase $\SI{-120}{\degree}$}      \\ \hline
     Butterworth                   & \SI{1570.4}{\hertz} &     \SI{1069.2}{} &\SI{2417.2}{}     \\
     Tschebyscheff             & \SI{1582.6}{\hertz}  &   \SI{915.3}{}  &\SI{1425.2}{}    \\ 
     Bessel                &\SI{1582.6}{\hertz}   &\SI{1248.9}{}&\SI{3298.2}{}  \\ \hline
@@ -41,7 +63,7 @@
 \begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|c|c|}\hline
-    \tbf{Filter} & \tbf{Grenzfrequenz $f_g$} & \tbf{Phase $\SI{-60}{\degree}$}     &  \tbf{Phase $\SI{-120}{\degree}$}     &  \\ \hline
+    \tbf{Filter} & \tbf{Grenzfrequenz $f_g$} & \tbf{Phase $\SI{-60}{\degree}$}     &  \tbf{Phase $\SI{-120}{\degree}$}     \\ \hline
     Butterworth                   & \SI{1584.6}{\hertz} &     \SI{1251.3}{} &\SI{3283.9}{}     \\
     Tschebyscheff             & \SI{1578.9}{\hertz}  &   \SI{914.6}{}  &\SI{1419.8}{}    \\ 
     Bessel                &\SI{1584.6}{\hertz}   &\SI{1066.4}{}&\SI{2404.5}{}  \\ \hline
@@ -95,6 +117,7 @@
         \label{fig:A3b_label}
     \end{center}
 \end{figure}
+
 % grafik einbinden
 \begin{figure}[H]
     \begin{center}

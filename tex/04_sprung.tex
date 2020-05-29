@@ -1,26 +1,27 @@
 \section{Sprung}
-Das Zeitverhalten der 3 Tiefpässe soll an Hand der Sprungantworten untersucht werden. Zur Messung der Sprungantwort wird das Filter mit einem periodischen Rechtecksignal geeigneter Amplitude und Frequenz aus einem Funktionsgenerator angesteuert und das Ausgangssignal auf dem Oszilloskop abgebildet.
- Skizzieren Sie die Messschaltung mit Angabe der verwendeten Geräte und plotten Sie Einund Ausgangssignale für die drei Tiefpässe. Bestimmen Sie aus den Sprungantworten der drei Tiefpässe Anstiegszeit, Überschwingen (bezogen auf Endwert) und Einschwingzeit (bezogen auf 5% Abweichung vom Endwert) und stellen Sie alle Werte in einer Tabelle gemeinsam dar!
-
+In diesem Teil wird die Sprungantwort der 3 Tiefpässe untersucht. Der Filter wird mit einem Rechtecksignal der Amplitude $\SI{6}{\volt}$ und Frequenz $\SI{2000}{\hertz}$  angeregt und ein Oszilloskop erfasst das Ausgangssignal.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Comments
 %Plots der Sprungantworten der drei Tiefpässe, Bestimmung von Anstiegszeit, Überschwingen und Einschwingzeit; Darstellung und Vergleich in einer Tabelle
 %multi figure
+
 \begin{figure}[H]
 \begin{center}
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Bessel Anstiegszeit.png}}  
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Butterworth Anstiegszeit .png}} 
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Tscheby Anstiegszeit.png}} \\
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Bessel Einschwingzeit.png}}  
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Butterworth Einschwingzeit.png}} 
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Tscheby Einschwingzeit.png}} \\
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Bessel Überschwingzeit.png}}  
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Butterworth Überschwingen}} 
-\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Tscheby Überschwingzeit}} \\
-\caption{Anstiegszeit, Einschwingzeit und Überschwingzeit}
+\subfloat[Bessel]{\includegraphics[width = \textwidth/3]{img/4 Bessel Anstiegszeit.png}}  
+\subfloat[Butterworth]{\includegraphics[width = \textwidth/3]{img/4 Butterworth Anstiegszeit .png}} 
+\subfloat[Tschebyscheff]{\includegraphics[width = \textwidth/3]{img/4 Tscheby Anstiegszeit.png}} \\
+%\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Bessel Einschwingzeit.png}}  
+%\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Butterworth Einschwingzeit.png}} 
+%\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Tscheby Einschwingzeit.png}} \\
+%\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Bessel Überschwingzeit.png}}  
+%\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Butterworth Überschwingen.png}} 
+%\subfloat[\imgfilename]{\includegraphics[width = \textwidth/3]{img/4 Tscheby Überschwingzeit.png}} \\
+%\caption{Anstiegszeit, Einschwingzeit und Überschwingzeit}
 \label{fig:A4_mult}
 \end{center}
 \end{figure}
+
+In der \autoref{fig:A4_mult} sind die Anstiegszeit, Einschwingzeit und das Überschwingen abgebildet. Die Werte aus der Folgenden Tabelle stammen aus der Anlage: "GNP V3 Messwerte (Tabelle).pdf".
 
 \begin{table}[H]
     \centering
@@ -32,3 +33,7 @@ Das Zeitverhalten der 3 Tiefpässe soll an Hand der Sprungantworten untersucht w
     \end{tabular}
     \caption{Grenzfrequenzen der Filter}
 \end{table}
+
+\subsection{Auswertung}
+Die Filter verhalten sich wie erwartet. Der Bessel Filter gibt das Rechtecksignal am genausten wieder, Butterworth und Tschebyscheff überschwingen, der Tschebyscheff mit einem zweiten negativen Überschwinger. Die Einschwingzeit von dem Teschbyscheff Filter liegt mit $\SI{1.08}{\milli\second} $ weitaus höher als Butterworth und Bessel mit $\SI{300}{\micro\second}$ und $\SI{316}{\micro\second}$. %intressant zu erwähnen warum Teschbyscheff 5vpp und nicht 6vpp hat?
+Butterworth und Bessel unterscheiden sich in ihrer antwort, auf das Rechtecksignal, relativ wenig. Das überschwingen ist der entscheidende faktor den die beiden Filter von einander Trennt. Mit $\SI{0.26}{\volt}$ ist die höhe des Überschwingens vier mal so hoch beim Butterworth im Vergleich zum Bessel Filter.
